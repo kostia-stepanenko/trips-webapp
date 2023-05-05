@@ -111,5 +111,6 @@ body {
 .backgroundImage{
 width: 100%;
 height: 500px;
-background-image: url('/img/backgroundImage.jpeg');
+background-image: url('/img/goodImage.jpeg');
+  opacity: 75%;
 }
