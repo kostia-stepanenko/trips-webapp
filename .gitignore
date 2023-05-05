@@ -1,0 +1,11 @@
+# ignore packages installed by npm
+node_modules
+
+# WebStorm files
+*.iml
+.idea
+
+modules.xml
+vcf.xml
+
+
