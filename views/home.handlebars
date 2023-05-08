@@ -1,7 +1,13 @@
 
 <!-- find a suitable hd panaram photo to input-->
 <div class="backgroundImage">
-    <p class="text">BackgroundImage Text</p>
+    <p class="text">
+            {{#if user.loggedin}}
+                Hello, {{ user.username }}
+            {{else}}
+                Anonymous
+            {{/if}}
+    </p>
 </div>
 <button class="nav-btn open-btn">
     <i class="fas fa-bars"></i>
@@ -16,17 +22,13 @@
             </button>
 
             <ul class="list">
-                <li><a href="#">Teams</a></li>
+                {{#if user.loggedin}}
+                    <li><a href="/logout">Logout</a></li>
+                    <li><a href="/wishList">Wish List</a></li>
+                {{else}}
+                    <li><a href="/login">Login</a></li>
+                {{/if}}
                 <li><a href="/help">Help</a></li>
-                <li><a href="/wishList">Wish List</a></li>
-                <li>
-                    <ul>
-                        <li><a href="#">Netflix culture memo</a></li>
-                        <li><a href="#">Work life balance</a></li>
-                        <li><a href="#">Inclusion & diversity</a></li>
-                        <li><a href="#">Your notes, DONT FORGET THE NOTES</a></li>
-                    </ul>
-                </li>
             </ul>
         </div>
     </div>
@@ -44,9 +46,6 @@
                 <h3>{{name}}</h3>
             </div>
         {{/if}}
-
-
-
     {{/each}}
 </div>
 
