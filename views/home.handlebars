@@ -2,8 +2,8 @@
 <!-- find a suitable hd panaram photo to input-->
 <div class="backgroundImage">
     <p class="text">
-            {{#if user.loggedin}}
-                Hello, {{ user.username }}
+            {{#if session.user.loggedin}}
+                Hello, {{ session.user.username }}
             {{else}}
                 Anonymous
             {{/if}}
@@ -22,7 +22,7 @@
             </button>
 
             <ul class="list">
-                {{#if user.loggedin}}
+                {{#if session.user.loggedin}}
                     <li><a href="/logout">Logout</a></li>
                     <li><a href="/wishList">Wish List</a></li>
                 {{else}}
