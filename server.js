@@ -1,6 +1,9 @@
 const express = require('express');
 const expressHandlebars = require('express-handlebars').engine;
-const user = require('./lib/user')
+const handlers = require('./lib/handlers')
+
+const cookieParser = require("cookie-parser");
+const expressSession = require('express-session');
 
 const app = express();
 
@@ -10,51 +13,60 @@ app.engine('handlebars', expressHandlebars({
 }));
 app.set('view engine', 'handlebars');
 
-// static part, like logs, JS
+// cookie parser middleware
+app.use(cookieParser());
 
+// session middleware
+app.use(expressSession({
+  secret: 'my-secret',
+  saveUninitialized: true,
+  cookie: { maxAge: 24 * 60 * 60 * 1000 },
+  resave: false
+}));
+
+// middleware to propagate session information to view
+app.use(function (req, res, next) {
+  res.locals.session = req.session;
+  next();
+});
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+// static content: images, JS scripts and CSS
 console.log(`Static content location: ${__dirname + '/public'}`);
 app.use(express.static(__dirname + '/public'));
 
-
 // home page handler
-app.get('/', (req, res) => {
-  res.render('home', {username: user.getRandomUser()});
-});
+app.get('/', handlers.home);
 
+// login page handler
+app.get('/login', handlers.login);
+
+// logout page handler
+app.get('/logout', handlers.logout);
+
+// authentication flow
+app.post('/auth', handlers.auth);
 
 // help page handler
-app.get('/help', (req, res) => res.render('help'));
+app.get('/help', handlers.help);
 
 // Wish List handler
-app.get('/wishList', (req, res) => res.render('wishList'));
-
+app.get('/wishList', handlers.wishList);
 
 // show headers
-app.get('/headers', (req, res) => {
-  const headers = Object.entries(req.headers)
-      .map(([key, value]) => `${key}: ${value}`);
-
-  res.type('text/plain')
-  res.send(headers.join('\n'));
-
-});
+app.get('/headers', handlers.showHeaders );
 
 // custom 404 page
-app.use((req, res) => {
-  res.status(404)
-  res.render('404')
-});
+app.use(handlers.notFound);
 
 // custom 500 page
-app.use((err, req, res, next) => {
-  console.error(err.message)
-  res.status(500)
-  res.render('500')
-});
+app.use(handlers.serverError);
 
-// Default node js port
+// Default server port
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => console.log(
-  `Express started on http://localhost:${port}; ` +
-  `press Ctrl-C to terminate.`));
+  `trips-webapp server started at http://localhost:${port}; ` +
+  `press Ctrl-C to terminate...`
+));
