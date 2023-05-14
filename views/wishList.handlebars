@@ -3,7 +3,11 @@
 <div class="container">
     <ul>
         {{#each placesFromWishlist}}
-            <li>{{name}}</li>
+            <li>
+                <img src="url({{imgUrl}})" alt="">
+                    <h3>{{name}} {{price}}</h3>
+
+            </li>
         {{/each}}
     </ul>
 </div>
