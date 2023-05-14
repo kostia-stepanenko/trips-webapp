@@ -27,3 +27,7 @@ function removeActiveClasses() {
         panel.classList.remove('active')
     })
 }
+
+
+/* notes/wishlist part*/
+

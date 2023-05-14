@@ -24,7 +24,7 @@ db.places.drop();
 db.places.insertOne({name: "Explore The World", price: 40, isSeason: true, imgUrl: "/img/places/exploreTheWorld.jpeg"});
 db.places.insertOne({name: "Wild Forest", price: 33, isSeason: true, imgUrl: "/img/places/wildForest.jpeg"});
 db.places.insertOne({name: "Sunny Beach", price: 120, isSeason: true, imgUrl: "/img/places/sunnyBeach.jpeg"});
-db.places.insertOne({name: "City on Winter", price: 120, isSeason: true, imgUrl: "/img/places/citOnWinter.jpeg"});
+db.places.insertOne({name: "City on Winter", price: 120, isSeason: true, imgUrl: "/img/places/cityOnWinter.jpeg"});
 db.places.insertOne({name: "Mountains", price: 120, isSeason: true, imgUrl: "/img/places/mountains.jpeg"});
 
 db.places.find();

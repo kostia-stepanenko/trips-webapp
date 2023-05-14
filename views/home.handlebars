@@ -39,6 +39,14 @@
     {{#each places}}
         {{#if @first}}
             <div class="panel active" style="background-image: url({{imgUrl}})">
+
+
+
+
+                <input type="checkbox" id="panel1check" name="panel1check" >
+                <label for="panel1check"> Add to Wishlist</label><br>
+
+
                 <h3>{{name}}</h3>
             </div>
         {{else}}
@@ -49,6 +57,6 @@
     {{/each}}
 </div>
 
-<!--fix the problem with scrolling and UI overlapping-->
+
 
 <script src="/js/script.js"></script>
