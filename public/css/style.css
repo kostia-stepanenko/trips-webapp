@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 * {
   box-sizing: border-box;
 }
@@ -168,5 +169,57 @@ background-image: url('/img/goodImage.jpeg');
 }
 
 
+.expandCardsCheckbox{
+  position:absolute;
+  top:0;
+  right:0;
+  -webkit-appearance: none;
+}
+
+.checkboxLabels{
+  position:absolute;
+  margin-right: 20px;
+  top:0;
+  right:0;
+  font-size: 15px;
+}
+
+
+
+/* to style checkboxes*/
+.expandCardsCheckbox + label {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 30px;
+  padding-left: 15px;
+  transition: all 0.2s;
+}
+.expandCardsCheckbox:checked + label:before {
+  content: "❤";
+  color: #F00;
+}
+.expandCardsCheckbox + label:before {
+  width: 31.5px;
+  height: 30px;
+  content: "";
+  position: absolute;
+  margin-left: -48px;
+  margin-top: 3px;
+  font-family: FontAwesome;
+  font-size: 30px;
+  content: "❤";
+  transition: all 0.3s;
+  color: #888;
+}
+.expandCardsCheckbox + label:hover:before {
+  transform: scale(1.2);
+}
+
 /* notes/wishlist part*/
+
+
 

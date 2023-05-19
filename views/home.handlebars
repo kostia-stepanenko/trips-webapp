@@ -9,10 +9,10 @@
             {{/if}}
     </p>
 </div>
+
 <button class="nav-btn open-btn">
     <i class="fas fa-bars"></i>
 </button>
-<p class="text">Mobile Navigation</p>
 
 <div class="nav nav-black">
     <div class="nav nav-red">
@@ -40,23 +40,23 @@
         {{#if @first}}
             <div class="panel active" style="background-image: url({{imgUrl}})">
 
-
-
-
-                <input type="checkbox" id="panel1check" name="panel1check" >
-                <label for="panel1check"> Add to Wishlist</label><br>
-
+                <!--first checkbox-->
+                <input type="checkbox" id="panel{{@index}}check" name="panel{{@index}}check" checked class="expandCardsCheckbox" >
+                <label for="panel{{@index}}check" class="checkboxLabels"></label><br>
 
                 <h3>{{name}}</h3>
             </div>
         {{else}}
             <div class="panel" style="background-image: url({{imgUrl}})">
+
+                <!--other checkboxes-->
+                <input type="checkbox" id="panel{{@index}}check" name="panel{{@index}}check"  class="expandCardsCheckbox" >
+                <label for="panel{{@index}}check" class="checkboxLabels"></label><br>
+
                 <h3>{{name}}</h3>
             </div>
         {{/if}}
     {{/each}}
 </div>
-
-
 
 <script src="/js/script.js"></script>
