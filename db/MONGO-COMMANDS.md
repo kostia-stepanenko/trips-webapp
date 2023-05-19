@@ -21,11 +21,11 @@ show collections;
 ```
 db.places.drop();
 
-db.places.insertOne({_id: ObjectId("000000000000000000000001"), name: "Explore The World", price: 40, isSeason: true, imgUrl: "/img/places/exploreTheWorld.jpeg"});
-db.places.insertOne({_id: ObjectId("000000000000000000000002"), name: "Wild Forest", price: 33, isSeason: true, imgUrl: "/img/places/wildForest.jpeg"});
-db.places.insertOne({_id: ObjectId("000000000000000000000003"), name: "Sunny Beach", price: 120, isSeason: true, imgUrl: "/img/places/sunnyBeach.jpeg"});
-db.places.insertOne({_id: ObjectId("000000000000000000000004"), name: "City on Winter", price: 120, isSeason: true, imgUrl: "/img/places/cityOnWinter.jpeg"});
-db.places.insertOne({_id: ObjectId("000000000000000000000005"), name: "Mountains", price: 120, isSeason: true, imgUrl: "/img/places/mountains.jpeg"});
+db.places.insertOne({_id: ObjectId("000000000000000000000001"), name: "Explore The World", price: 40, season: true, imgUrl: "/img/places/exploreTheWorld.jpeg"});
+db.places.insertOne({_id: ObjectId("000000000000000000000002"), name: "Wild Forest", price: 33, season: false, imgUrl: "/img/places/wildForest.jpeg"});
+db.places.insertOne({_id: ObjectId("000000000000000000000003"), name: "Sunny Beach", price: 120, season: true, imgUrl: "/img/places/sunnyBeach.jpeg"});
+db.places.insertOne({_id: ObjectId("000000000000000000000004"), name: "City on Winter", price: 120, season: true, imgUrl: "/img/places/cityOnWinter.jpeg"});
+db.places.insertOne({_id: ObjectId("000000000000000000000005"), name: "Mountains", price: 120, season: true, imgUrl: "/img/places/mountains.jpeg"});
 
 
 db.places.find();
