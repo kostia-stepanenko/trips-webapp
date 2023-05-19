@@ -41,8 +41,8 @@
             <div class="panel active" style="background-image: url({{imgUrl}})">
 
                 <!--first checkbox-->
-                <input type="checkbox" id="panel{{@index}}check" name="panel{{@index}}check" checked class="expandCardsCheckbox" >
-                <label for="panel{{@index}}check" class="checkboxLabels"></label><br>
+                <input type="checkbox" id="{{place_id}}" name="{{place_id}}-name" {{#if checked}} checked {{/if}} class="expandCardsCheckbox" >
+                <label for="{{place_id}}" class="checkboxLabels"></label><br>
 
                 <h3>{{name}}</h3>
             </div>
@@ -50,8 +50,8 @@
             <div class="panel" style="background-image: url({{imgUrl}})">
 
                 <!--other checkboxes-->
-                <input type="checkbox" id="panel{{@index}}check" name="panel{{@index}}check"  class="expandCardsCheckbox" >
-                <label for="panel{{@index}}check" class="checkboxLabels"></label><br>
+                <input type="checkbox" id="{{place_id}}" name="{{place_id}}-name" {{#if checked}} checked {{/if}} class="expandCardsCheckbox" >
+                <label for="{{place_id}}" class="checkboxLabels"></label><br>
 
                 <h3>{{name}}</h3>
             </div>
