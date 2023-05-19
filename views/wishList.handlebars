@@ -5,8 +5,7 @@
         {{#each placesFromWishlist}}
             <li>
                 <img src="{{imgUrl}}" alt="" width="200px" height="200px">
-                    <h3>{{name}} {{price}}</h3>
-
+                    <h3>{{name}}, price: {{price}}, {{#if season}} Season {{else}} Not season {{/if}}</h3>
             </li>
         {{/each}}
     </ul>
