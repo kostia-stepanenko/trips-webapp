@@ -28,6 +28,16 @@ function removeActiveClasses() {
     })
 }
 
+function updateWishList(elementId){
+
+    $.post("http://localhost:3000/addToWishList",
+        {
+            placeId: elementId.id,
+        },
+        function(data, status){
+            alert("Data: " + data + "\nStatus: " + status);
+        });
+}
 
 /* notes/wishlist part*/
 

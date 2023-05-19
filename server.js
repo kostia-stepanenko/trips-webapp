@@ -54,6 +54,9 @@ app.get('/help', handlers.help);
 // Wish List handler
 app.get('/wishList', handlers.wishList);
 
+// Add new place to wishlist
+app.post('/addToWishList', handlers.addToWishList);
+
 // show headers
 app.get('/headers', handlers.showHeaders );
 
