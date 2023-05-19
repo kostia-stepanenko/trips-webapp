@@ -21,11 +21,11 @@ show collections;
 ```
 db.places.drop();
 
-db.places.insertOne({name: "Explore The World", price: 40, isSeason: true, imgUrl: "/img/places/exploreTheWorld.jpeg"});
-db.places.insertOne({name: "Wild Forest", price: 33, isSeason: true, imgUrl: "/img/places/wildForest.jpeg"});
-db.places.insertOne({name: "Sunny Beach", price: 120, isSeason: true, imgUrl: "/img/places/sunnyBeach.jpeg"});
-db.places.insertOne({name: "City on Winter", price: 120, isSeason: true, imgUrl: "/img/places/citOnWinter.jpeg"});
-db.places.insertOne({name: "Mountains", price: 120, isSeason: true, imgUrl: "/img/places/mountains.jpeg"});
+db.places.insertOne({_id: ObjectId("000000000000000000000001"), name: "Explore The World", price: 40, isSeason: true, imgUrl: "/img/places/exploreTheWorld.jpeg"});
+db.places.insertOne({_id: ObjectId("000000000000000000000002"), name: "Wild Forest", price: 33, isSeason: true, imgUrl: "/img/places/wildForest.jpeg"});
+db.places.insertOne({_id: ObjectId("000000000000000000000003"), name: "Sunny Beach", price: 120, isSeason: true, imgUrl: "/img/places/sunnyBeach.jpeg"});
+db.places.insertOne({_id: ObjectId("000000000000000000000004"), name: "City on Winter", price: 120, isSeason: true, imgUrl: "/img/places/cityOnWinter.jpeg"});
+db.places.insertOne({_id: ObjectId("000000000000000000000005"), name: "Mountains", price: 120, isSeason: true, imgUrl: "/img/places/mountains.jpeg"});
 
 db.places.find();
 ```
@@ -34,7 +34,8 @@ db.places.find();
 ```
 db.users.drop();
 
-db.users.insertOne({username: "kostia", wishList: ["6460bfb2dcf02fa69e0e9330", "6460bfb2dcf02fa69e0e9331"]});
+db.users.insertOne({username: "kostia", password: "kostia", wishList: ["000000000000000000000001", "000000000000000000000002"]});
+db.users.insertOne({username: "olesia", password: "olesia", wishList: ["000000000000000000000005"]});
 
 db.users.find();
 ```
