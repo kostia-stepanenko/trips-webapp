@@ -55,7 +55,10 @@ app.get('/help', handlers.help);
 app.get('/wishList', handlers.wishList);
 
 // Add new place to wishlist
-app.post('/addToWishList', handlers.addToWishList);
+app.post('/api/addToWishList', handlers.addToWishList);
+
+// Delete place from wishlist
+app.post('/api/deleteFromWishList', handlers.deleteFromWishList);
 
 // show headers
 app.get('/headers', handlers.showHeaders );

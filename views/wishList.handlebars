@@ -1,11 +1,14 @@
 <h1>{{ session.user.username }} WishList</h1>
 
+
+<input type="button" onclick="window.location.href='/';" value="Go back" class="returnBtn"/>
 <div class="container">
     <ul>
         {{#each placesFromWishlist}}
             <li>
                 <img src="{{imgUrl}}" alt="" width="200px" height="200px">
                     <h3>{{name}}, price: {{price}}, {{#if season}} Season {{else}} Not season {{/if}}</h3>
+                <input type="button" onclick="window.location.href='/';" value="See the comments" class="commentBtn"/>
             </li>
         {{/each}}
     </ul>

@@ -30,13 +30,37 @@ function removeActiveClasses() {
 
 function updateWishList(elementId){
 
-    $.post("http://localhost:3000/addToWishList",
-        {
-            placeId: elementId.id,
-        },
-        function(data, status){
-            alert("Data: " + data + "\nStatus: " + status);
-        });
+    // add new place to wish list
+    if( elementId.checked ){
+        $.ajax({
+            type: "POST",
+            url: "/api/addToWishList",
+            data: JSON.stringify({ placeId: elementId.id }),
+            contentType: "application/json"
+        })
+            .done(function(data){
+                elementId.checked = true;
+            })
+            .fail(function(errMsg) {
+                elementId.checked = false;
+            });
+    }
+
+    // delete place from wish list
+    else {
+        $.ajax({
+            type: "POST",
+            url: "/api/deleteFromWishList",
+            data: JSON.stringify({ placeId: elementId.id }),
+            contentType: "application/json"
+        })
+            .done(function(data){
+                elementId.checked = false;
+            })
+            .fail(function(errMsg) {
+                elementId.checked = true;
+            });
+    }
 }
 
 /* notes/wishlist part*/
