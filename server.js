@@ -51,6 +51,9 @@ app.post('/auth', handlers.auth);
 // help page handler
 app.get('/help', handlers.help);
 
+// notes page handler
+app.get('/notes', handlers.notes);
+
 // Wish List handler
 app.get('/wishList', handlers.wishList);
 

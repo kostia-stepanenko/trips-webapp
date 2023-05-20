@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
 * {
   box-sizing: border-box;
 }
@@ -355,15 +356,24 @@ background-color:#181a1b;
 
 /* Notes part*/
 
+.notesBody {
+  background-color: #7bdaf3;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding-top: 3rem;
+}
+
 .add {
   position: fixed;
-  top: 1rem;
-  right: 1rem;
+  top: 16px;
+  right: 16px;
   background-color: #9ec862;
   color: #fff;
   border: none;
   border-radius: 3px;
-  padding: 0.5rem 1rem;
+  padding: 8px 16px;
   cursor: pointer;
 }
 

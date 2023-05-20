@@ -25,7 +25,6 @@
                 {{#if session.user.loggedin}}
                     <li><a href="/logout">Logout</a></li>
                     <li><a href="/wishList">Wish List</a></li>
-                <li><a href="/notes">Your Notes</a></li>
                 {{else}}
                     <li><a href="/login">Login</a></li>
                 {{/if}}
@@ -47,6 +46,7 @@
                 <label for="{{place_id}}" class="checkboxLabels"></label><br>
 
                 <h3>{{name}}</h3>
+
             </div>
         {{else}}
             <div class="panel" style="background-image: url({{imgUrl}})">

@@ -11,10 +11,11 @@
                 <div class="imageBorders"> <img src="{{imgUrl}}" alt="" width="200px" height="200px"> </div>
 
                     <div class="wishListDesc"> <h3>{{name}}, price: {{price}}, {{#if season}} Season {{else}} Not season {{/if}}</h3> </div>
-                    <input type="button" onclick="window.location.href='/';" value="See the comments" class="commentBtn"/>
+                    <input type="button" onclick="window.location.href='/notes?placeId=';" value="See the comments" class="commentBtn"/>
              </li>
         {{/each}}
         </ul>
     </div>
+
 
 </body>
