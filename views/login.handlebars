@@ -1,11 +1,42 @@
-<body>
-<div class="login">
-    <h1>Login</h1>
-    <form action="/auth" method="post">
-        <label for="username"></label>
-        <input type="text" name="username" placeholder="Username" id="username" required value="kostia">
-        <label for="password"></label>
-        <input type="password" name="password" placeholder="Password" id="password" required value="kostia">
-        <input type="submit" value="Login">
-    </form>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.8.11/tailwind.min.css"
+            integrity="sha512-KO1h5ynYuqsFuEicc7DmOQc+S9m2xiCKYlC3zcZCSEw0RGDsxcMnppRaMZnb0DdzTDPaW22ID/gAGCZ9i+RT/w=="
+            crossorigin="anonymous"/>
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Login Page</title>
+</head>
+<body class="loginBody">
+<div class="background" id="background"></div>
+<form action="/auth" method="post">
+<div class="bg-white rounded p-10 text-center shadow-md">
+    <h1 class="text-3xl">User Login</h1>
+    <p class="text-sm text-gray-700">Input username and password</p>
+    <div class="my-4 text-left">
+        <label for="username" class="text-gray-900">Username:</label>
+        <input
+
+                class="border block w-full p-2 mt-2 rounded"
+                type="text" name="username" placeholder="Username" id="username" required value="kostia"/>
+    </div>
+
+    <div class="my-4 text-left">
+        <label for="password" class="text-gray-900">Password:</label>
+        <input
+
+                class="border block w-full p-2 mt-2 rounded"
+                type="password" name="password" placeholder="Password" id="password" required value="kostia"/>
+    </div>
+
+    <button class="bg-black text-white py-2 mt-4 inline-block w-full rounded" type="submit" value="Login">
+        Login
+    </button>
 </div>
+</form>
+</body>
+</html>

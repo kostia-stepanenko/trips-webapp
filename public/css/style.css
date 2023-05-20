@@ -220,7 +220,30 @@ background-image: url('/img/goodImage.jpeg');
 }
 
 
+/* Login Form Part*/
 
+.loginBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  overflow: hidden;
+  margin: 0;
+}
+
+.loginBody form{
+z-index: 10;
+}
+.background {
+  background: url('../img/loginBackground.jpeg') no-repeat center center/cover;
+  position: absolute;
+  top: -20px;
+  bottom: -20px;
+  left: -20px;
+  right: -20px;
+  z-index: 2;
+}
 /*wishlist part*/
 .wishListBackground{
 background-color:#181a1b;
@@ -233,6 +256,7 @@ background-color:#181a1b;
   height: 50px;
   width:  150px;
   background-color: seagreen;
+  border-radius: 20px;
 }
 
 
