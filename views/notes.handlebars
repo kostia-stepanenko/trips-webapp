@@ -1,18 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Welcome to your notes</title>
-</head>
-<body class="notesBody">
-<button class="add" id="add">
-    <i class="fas fa-plus"></i> Add note
-</button>
 
-<div class></div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/1.2.2/marked.min.js"></script>
-<script src="/js/script.js"></script>
-</body>
-</html>
+
+{{#each notes}}
+    <div class="info">
+        <p><strong>{{username}}: </strong>{{noteText}}</p>
+    </div>
+{{/each}}
+
+<div>
+    <textarea id="noteText" rows="3"></textarea> <br>
+    <button id="addNoteButton" style="background-color:cornflowerblue" onclick="addNote();">Add Note</button>
+</div>
+
+
 
