@@ -221,7 +221,10 @@ background-image: url('/img/goodImage.jpeg');
 
 
 
-/* notes/wishlist part*/
+/*wishlist part*/
+.wishListBackground{
+background-color:#181a1b;
+}
 
 .returnBtn{
   position: absolute;
@@ -235,20 +238,51 @@ background-image: url('/img/goodImage.jpeg');
 
 .commentBtn{
   margin-bottom: 80px;
-
+  border-width: 2px;
+  border-color: #9ec862;
+  border-radius: 20px;
 }
 
+.imageBorders{
+  border-color: mediumseagreen;
+  border-style: solid;
+  border-radius: 20px;
+  width: 200px ;
+  height: 200px;
+  overflow:hidden;
+}
+
+.imageBorders img{
+  width: 100%;
+  height: 100%;
+}
+
+.wishListDesc{
+  background-color: darkslategray;
+  font-size: 15px;
+  border-color: #9ec862;
+  border-style: solid;
+  border-radius: 20px;
+}
+
+
+
 /* help page part*/
+
+
+
 .helpBackground{
-  background-color: lightgrey;
+  background-color: #181a1b;
   width: 100%;
   height: 750px;
+  font-size: 20px;
 }
 .helpIntro{
   left: 10px;
   background-color: cadetblue;
-  width: 30%;
+  width: 20%;
   border-radius: 40px;
+  color: white;
 }
 
 .dividingDivExt{
@@ -287,9 +321,71 @@ background-image: url('/img/goodImage.jpeg');
 }
 
 .footer{
-  background-color: darkred;
+  background-color: #9ec862;
   position: absolute;
   bottom: 0;
   width: 100%;
+  font-size: 15px;
+  text-align: center;
 }
 
+/* Notes part*/
+
+.add {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background-color: #9ec862;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.add:active {
+  transform: scale(0.98);
+}
+
+.note {
+  background-color: #fff;
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.1);
+  margin: 30px 20px;
+  height: 400px;
+  width: 400px;
+  overflow-y: scroll;
+}
+
+.note .tools {
+  background-color: #9ec862;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem;
+}
+
+.note .tools button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+
+.note textarea {
+  outline: none;
+  font-family: inherit;
+  font-size: 1.2rem;
+  border: none;
+  height: 400px;
+  width: 100%;
+  padding: 20px;
+}
+
+.main {
+  padding: 20px;
+}
+
+.hidden {
+  display: none;
+}
