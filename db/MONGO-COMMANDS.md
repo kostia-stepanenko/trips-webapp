@@ -40,6 +40,18 @@ db.users.insertOne({username: "olesia", password: "olesia", wishList: ["00000000
 
 db.users.find();
 ```
+
+### Notes
+```
+db.notes.drop();
+
+db.notes.insertOne({placeId: "000000000000000000000002", username: "kostia", noteText: "Wild forest is really nice place"});
+db.notes.insertOne({placeId: "000000000000000000000002", username: "olesia", noteText: "Wild forest is not bad"});
+
+db.notes.find();
+
+```
+
 5. Exit mongo shell
 ```
 exit

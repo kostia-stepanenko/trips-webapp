@@ -63,8 +63,8 @@ app.post('/api/addToWishList', handlers.addToWishList);
 // Delete place from wishlist
 app.post('/api/deleteFromWishList', handlers.deleteFromWishList);
 
-// show headers
-app.get('/headers', handlers.showHeaders );
+// Add new Note
+app.post('/api/addNote', handlers.addNote);
 
 // custom 404 page
 app.use(handlers.notFound);
