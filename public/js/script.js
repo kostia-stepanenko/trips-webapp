@@ -65,6 +65,10 @@ function updateWishList(elementId){
 
 /* notes part */
 
+function isEmpty(str) {
+    return (!str || str.length === 0 );
+}
+
 function addNote(){
 
     const urlParams = new URLSearchParams(window.location.search);
@@ -73,6 +77,11 @@ function addNote(){
 
     const noteText = document.getElementById("noteText").value;
 
+    if( noteText === ''){
+        document.getElementById("noteText").style.background = 'Yellow';
+        document.getElementById("noteText").placeholder = 'Error:Empty comment ';
+        return;
+    }
     $.ajax({
         type: "POST",
         url: "/api/addNote",
